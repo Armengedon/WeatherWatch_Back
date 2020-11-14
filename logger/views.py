@@ -10,6 +10,8 @@ def detail(request, esp_id):
 
 def readings(request):
 	response = ""
+	if (!Reading)
+		return HttpResponse("No readings yet")
 	for read in Reading.objects.all():
 		response += str(read) + "\n"
 	return HttpResponse(response)
